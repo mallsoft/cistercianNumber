@@ -68,7 +68,7 @@
 	path {
 		stroke-linecap: var(---linecap, round);
 		fill: none;
-		stroke: var(---color, rgb(255, 60, 0));
+		stroke: var(---color, salmon);
 		stroke-width: var(---thickness, 0.5);
 	}
 </style>
