@@ -8,7 +8,7 @@ Svelte component for displaying Cistercian Numbers as svg paths
 
 ```html
 <script>
-	import CistercianNumber from 'cistercian-number/CistercianNumber.svelte';
+	import CistercianNumber from 'cistercian-number';
 </script>
 
 <div>
@@ -52,6 +52,16 @@ Looking like:
 
 ### "I wanna roll my own mode"
 
-Create an `<svg viewBox="0 0 12 12">` or symbol element
+```html
+<script>
+	import { cistercianNumberPaths } from 'cistercian-number';
+	const numbers = [1, 2, 3];
+</script>
+<!-- Create an `<svg>` or symbol element -->
 
-Inject values from `cistercianNumberPaths(value)` into `<path {d} />` elements.
+<svg viewBox="0 0 12 12">
+	{#each numbers.map(cistercianNumberPaths) as d}
+	<path {d} />
+	{/each}
+</svg>
+```
