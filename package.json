@@ -14,10 +14,11 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
+		"prepublishOnly": "echo 'Did you mean to publish `./package/`, instead of `./`?' && exit 1",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
@@ -35,7 +36,20 @@
 		"svelte-preprocess": "^4.10.6",
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
-		"vite": "^3.0.0"
+		"vite": "^3.1.0"
 	},
-	"type": "module"
+	"type": "module",
+	"release": {
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			[
+				"@semantic-release/npm",
+				{
+					"pkgRoot": "./package"
+				}
+			],
+			"@semantic-release/github"
+		]
+	}
 }
