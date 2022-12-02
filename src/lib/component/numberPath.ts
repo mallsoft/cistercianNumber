@@ -29,7 +29,7 @@ const cistercian_bits = [
 // to get 10's, 100's add 5 * position
 const mapping = [[0], [1], [2], [3], [4], [1, 4], [5], [1, 5], [2, 5], [1, 2, 5]];
 
-export function toPathArray(val: number): string[] {
+export function cistercianNumberPaths(val: number): string[] {
 	let cistercianDigits: string[] = [cistercian_bits[0]]; // start with stem
 
 	// in the possible range (1-9999) ... we can show 0 as a | but not a part of the system

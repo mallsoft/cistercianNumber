@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { toPathArray } from '$lib/numberPath.js';
+	import { cistercianNumberPaths } from '$lib/component/numberPath.js';
 
 	export let value: number = 0;
 
-	$: paths = toPathArray(value);
+	$: paths = cistercianNumberPaths(value);
 </script>
 
 <svg viewBox="0 0 12 12" class="cisterian-number">
