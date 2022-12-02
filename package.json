@@ -1,6 +1,16 @@
 {
 	"name": "cistercian-number",
 	"version": "0.0.2",
+	"homepage": "https://github.com/mallsoft/cistercianNumber#readme",
+	"license": "WTFPL",
+	"keywords": [
+		"svelte",
+		"component",
+		"svg",
+		"number",
+		"numeral",
+		"cistercian"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
