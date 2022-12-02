@@ -31,6 +31,7 @@ If you like the defaults you can omit the `div` as it's only for the css variabl
 ## Results in the following:
 
 ```html
+<!-- generated -->
 <svg viewBox="0 0 12 12" class="cisterian-number">
 	<path d="M6,11L6,1"></path>
 	<path d="M6,1L11,1"></path>
@@ -46,3 +47,11 @@ If you like the defaults you can omit the `div` as it's only for the css variabl
 Looking like:
 
 ![preview](https://user-images.githubusercontent.com/36839009/186229729-7dd8595c-87f3-4bf6-98f5-63481309862f.png)
+
+#
+
+### "I wanna roll my own mode"
+
+Create an `<svg viewBox="0 0 12 12">` or symbol element
+
+Inject values from `cistercianNumberPaths(value)` into `<path {d} />` elements.
